@@ -5,12 +5,13 @@ PHP >= 8.2, Composer, Node.js >= 18, MySQL/SQLite
 
 ## Установка
 1. `composer install`
-2. `cp .env.example .env` и настройте `DB_*`
-3. `php artisan key:generate`
-4. `php artisan migrate`
-5. `npm install`
-6. `npm run dev` (в отдельном терминале)
-7. `php artisan serve`
+2. `создайте базу данных`
+3. `cp .env.example .env` и настройте `DB_*`
+4. `php artisan key:generate`
+5. `php artisan migrate`
+6. `npm install`
+7. `npm run dev` (в отдельном терминале)
+8. `php artisan serve`
 
 Откройте http://localhost:8000
 
