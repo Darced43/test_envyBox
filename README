@@ -1,0 +1,21 @@
+# Laravel + Vue Poll App
+
+## Требования
+PHP >= 8.2, Composer, Node.js >= 18, MySQL/SQLite
+
+## Установка
+1. `composer install`
+2. `cp .env.example .env` и настройте `DB_*`
+3. `php artisan key:generate`
+4. `php artisan migrate`
+5. `npm install`
+6. `npm run dev` (в отдельном терминале)
+7. `php artisan serve`
+
+Откройте http://localhost:8000
+
+Проект разделён на слои с чётким направлением зависимостей (внутренние слои не знают о внешних):
+- `Domain/` → Интерфейсы, бизнес-правила, исключения.
+- `Application/` → UseCases, сервисы, фабрики, DTO, стратегии генерации кода.
+- `Infrastructure/` → Реализации репозиториев (Eloquent), работа с БД.
+- `Http/` → Тонкие контроллеры, FormRequests (Presentation Layer).
