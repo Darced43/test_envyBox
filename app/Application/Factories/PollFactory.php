@@ -14,7 +14,6 @@ class PollFactory {
         $poll = new Poll();
         $poll->title = $title;
         $poll->short_code = $this->strategy->generate();
-        // Обратите внимание: фабрика только создает объект, не сохраняет в БД
         return $poll;
     }
 }
